@@ -1,17 +1,17 @@
 #!/bin/bash
 
-source lib/accessPoints.sh
-source lib/dhcps.sh
-source lib/hellos.sh
-source lib/mains.sh
-source lib/nicControl.sh
-source lib/routes.sh
-source lib/attacks/arpSpoofs.sh
-source lib/attacks/dnsSpoofs.sh
-source lib/attacks/ferrets.sh
-source lib/attacks/menus.sh
-source lib/attacks/strips.sh
-source lib/attacks/wifis.sh
+source shell/accessPoints.sh
+source shell/dhcps.sh
+source shell/hellos.sh
+source shell/mains.sh
+source shell/nicControl.sh
+source shell/routes.sh
+source shell/attacks/arpSpoofs.sh
+source shell/attacks/dnsSpoofs.sh
+source shell/attacks/ferrets.sh
+source shell/attacks/menus.sh
+source shell/attacks/strips.sh
+source shell/attacks/wifis.sh
 
 ## launcher
 current_ver=3.8.2
