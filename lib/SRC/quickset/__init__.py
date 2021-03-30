@@ -18,7 +18,6 @@ class Shared(object):
     macRx   == Receiving MAC address
     macTx   == Transmitting MAC address
     nicChan == 802.11 channel to transmit on
-    nicChr  == nicChan to ordinal
     rates   == ...
     reason  == ...
     seqNum  == Sequence number
