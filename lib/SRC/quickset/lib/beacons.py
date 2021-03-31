@@ -5,11 +5,11 @@ class Beacons(object):
 
     Expects a class passed as shared with a minimum of:
         essid == 802.11 network name
-        macRx == Receiving MAC address
+        macTx == Receiving MAC address
     """
 
     __slots__ = ['essid',
-                 'macRx',
+                 'macTx',
                  'sh']
 
     def __init__(self, shared):
@@ -22,8 +22,8 @@ class Beacons(object):
                /Dot11(type = 0,
                       subtype = 8,
                       addr1 = 'ff:ff:ff:ff:ff:ff',
-                      addr2 = self.sh.macRx,
-                      addr3 = self.sh.macRx)\
+                      addr2 = self.sh.macTx,
+                      addr3 = self.sh.macTx)\
                /Dot11Beacon()\
                /Dot11Elt(ID = 'SSID',
                          info = self.sh.essid,
@@ -36,8 +36,8 @@ class Beacons(object):
                /Dot11(type = 0,
                       subtype = 8,
                       addr1 = 'ff:ff:ff:ff:ff:ff',
-                      addr2 = self.sh.macRx,
-                      addr3 = self.sh.macRx)\
+                      addr2 = self.sh.macTx,
+                      addr3 = self.sh.macTx)\
                /Dot11Beacon(cap = 'ESS+privacy')\
                /Dot11Elt(ID = 'SSID', info = self.sh.essid, len = len(self.sh.essid))
 
@@ -49,8 +49,8 @@ class Beacons(object):
                /Dot11(type = 0,
                       subtype = 8,
                       addr1 = 'ff:ff:ff:ff:ff:ff',
-                      addr2 = self.sh.macRx,
-                      addr3 = self.sh.macRx)\
+                      addr2 = self.sh.macTx,
+                      addr3 = self.sh.macTx)\
                /Dot11Beacon(cap = 'ESS+privacy')\
                /Dot11Elt(ID = 'SSID', info = self.sh.essid, len = len(self.sh.essid))\
                /Dot11Elt(ID = 'RSNinfo', info = (b'\x01\x00'                     #RSN Version 1
