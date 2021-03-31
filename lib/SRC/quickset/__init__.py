@@ -18,6 +18,7 @@ class Shared(object):
     macRx   == Receiving MAC address
     macTx   == Transmitting MAC address
     nicChan == 802.11 channel to transmit on
+    qsList  == Overview of the shared slots
     rates   == ...
     reason  == ...
     seqNum  == Sequence number
@@ -33,6 +34,7 @@ class Shared(object):
                  'macRx',
                  'macTx',
                  'nicChan',
+                 'qsList',
                  'rates',
                  'reason',
                  'seqNum']
@@ -66,6 +68,27 @@ class Shared(object):
         self.rates = rates
         self.reason = reason
         self.seqNum = seqNum
+
+
+    def qsView(self):
+        """Update qsList for easy remembering of the set values"""
+        self.qsList = []
+        self.qsList.append('algo    - {0}'.format(self.algo))
+        self.qsList.append('bus     - {0}'.format(self.bus))
+        self.qsList.append('esrates - {0}'.format(self.esrates))
+        self.qsList.append('essid   - {0}'.format(self.essid))
+        self.qsList.append('ipDst   - {0}'.format(self.ipDst))
+        self.qsList.append('ipGtw   - {0}'.format(self.ipGtw))
+        self.qsList.append('ipSrc   - {0}'.format(self.ipSrc))
+        self.qsList.append('macGw   - {0}'.format(self.macGw))
+        self.qsList.append('macRx   - {0}'.format(self.macRx))
+        self.qsList.append('macTx   - {0}'.format(self.macTx))
+        self.qsList.append('nicChan - {0}'.format(self.nicChan))
+        self.qsList.append('rates   - {0}'.format(self.rates))
+        self.qsList.append('reason  - {0}'.format(self.reason))
+        self.qsList.append('seqNum  - {0}'.format(self.seqNum))
+        for i in self.qsList:
+            print(i)
 
 ## Instatiations
 sh = Shared()
