@@ -38,7 +38,7 @@ class Deauths(object):
     """
     __slots__ = ['macRx',
                  'macTx',
-                 'reasons',
+                 'reason',
                  'sh']
 
     def __init__(self, shared):

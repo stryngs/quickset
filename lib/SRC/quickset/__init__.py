@@ -3,6 +3,7 @@ from .lib.beacons import Beacons
 from .lib.deauths import Deauths
 from .lib.probes import Probes
 from .lib.supplicants import Supplicants
+from scapy.all import *
 
 class Shared(object):
     """Create a shared class for all modules
