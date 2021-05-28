@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = 'quickset',
-    version = '0.4.0',
+    version = '0.4.2',
     author = 'stryngs',
     author_email = 'support@configitnow.com',
     packages = ['quickset', 'quickset.lib'],
