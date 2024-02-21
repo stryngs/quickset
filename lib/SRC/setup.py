@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = 'quickset',
-    version = '0.6.8',
+    version = '0.7.0',
     author = 'stryngs',
     author_email = 'stryngs@127.0.0.1',
     packages = ['quickset', 'quickset.lib'],

@@ -4,6 +4,7 @@ import time
 from .lib.arps import Arps
 from .lib.beacons import Beacons
 from .lib.deauths import Deauths
+from .lib.disassocs import Disassocs
 from .lib.icmps import Icmps
 from .lib.probes import Probes
 from .lib.supplicants import Supplicants
@@ -157,6 +158,7 @@ sh = Shared()
 arps = Arps(sh)
 beacons = Beacons(sh)
 deauths = Deauths(sh)
+disassocs = Disassocs(sh)
 icmps = Icmps(sh)
 probes = Probes(sh)
 supplicants = Supplicants(sh)
